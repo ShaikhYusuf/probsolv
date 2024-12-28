@@ -1,0 +1,31 @@
+<section class="audience-turnout">
+    <h3>Audience Turnout</h3>
+    <p>Goal: {{ audienceTurnout.goal }} attendees</p>
+    <p>Achieved: {{ audienceTurnout.achieved }} attendees</p>
+  </section>
+  
+  <section class="audience-awareness">
+    <h3>Audience Awareness and Desire</h3>
+    <p>{{ audienceAwareness.totalAwareness }}% of the school became aware of the concert.</p>
+    <p>{{ audienceAwareness.motivatedToAttend }}% of those aware were motivated to attend.</p>
+  </section>
+  
+  <section class="event-satisfaction">
+    <h3>Event Satisfaction</h3>
+    <p>{{ eventSatisfaction.returnRate }}% of attendees planned to return for future events.</p>
+  </section>
+  
+  <section class="key-lessons">
+    <h2>Key Lessons Learned</h2>
+    <ul>
+      <li *ngFor="let lesson of keyLessons">{{ lesson }}</li>
+    </ul>
+  </section>
+  
+  <section class="path-forward">
+    <h2>The Mushroom Lovers' Path Forward</h2>
+    <ul>
+      <li *ngFor="let step of pathForward">{{ step }}</li>
+    </ul>
+  </section>
+  

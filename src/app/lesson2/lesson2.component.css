@@ -1,0 +1,60 @@
+/* Container Styling */
+.container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  
+  /* Title */
+  .title {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Section Styling */
+  section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Section Headers */
+  h2, h3 {
+    color: #2c3e50;
+  }
+  
+  h3 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
+  
+  /* Lists Styling */
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  li {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Nested Lists */
+  ul ul {
+    margin-left: 20px;
+    list-style-type: circle;
+  }
+  
+  /* Highlights for key points */
+  strong {
+    font-weight: bold;
+    color: #3498db;
+  }
+  
