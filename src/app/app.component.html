@@ -1,21 +1,20 @@
 <div class="container">
-  <!-- Toggle Button -->
-  <button class="toggle-btn" (click)="toggleMenu()">☰</button>
+  <!-- Menu Button with Angular Material Icon -->
+  <button class="menu-btn" (click)="toggleMenu()">
+    <mat-icon>menu</mat-icon>
+  </button>
 
-  <!-- Sidebar that gets toggled -->
-  <div class="right-sidebar" [ngClass]="{'active': menuActive}">
-    <!-- Menu links -->
+  <!-- Dropdown Menu -->
+  <div class="dropdown-menu" *ngIf="isMenuActive">
     <ul>
-      <li *ngFor="let item of menuItems">
-        <a [href]="item.url">{{ item.name }}</a>
+      <li *ngFor="let item of menuItems" (click)="selectMenuItem()">
+        <a [routerLink]="item.url">{{ item.name }}</a>
       </li>
     </ul>
   </div>
-
-
 </div>
 
-<div class="container">
- 
-  <router-outlet></router-outlet> 
+<!-- Main Content Section -->
+<div class="main-content">
+  <router-outlet></router-outlet>
 </div>
