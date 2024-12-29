@@ -1,0 +1,87 @@
+.lesson-container {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #2c3e50;
+  }
+  
+  h2 {
+    color: #34495e;
+    font-size: 24px;
+  }
+  
+  h3 {
+    color: #16a085;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  
+  ul {
+    list-style-type: square;
+    padding-left: 20px;
+  }
+  
+  ul li {
+    font-size: 16px;
+    color: #34495e;
+    margin-bottom: 10px;
+  }
+  
+  blockquote {
+    background-color: #ecf0f1;
+    border-left: 4px solid #16a085;
+    padding: 10px;
+    margin: 20px 0;
+    font-style: italic;
+  }
+  
+  strong {
+    color: #16a085;
+  }
+  
+  section {
+    background-color: #f4f6f7;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  section ul {
+    padding-left: 30px;
+  }
+  
+  table.spending-matrix {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+  }
+  
+  table.spending-matrix th, table.spending-matrix td {
+    border: 1px solid #bdc3c7;
+    padding: 12px;
+    text-align: center;
+  }
+  
+  table.spending-matrix th {
+    background-color: #34495e;
+    color: white;
+  }
+  
+  table.spending-matrix td {
+    background-color: #ecf0f1;
+  }
+  
+  .conclusion p {
+    font-size: 16px;
+    color: #34495e;
+  }
+  
+  section h2 {
+    margin-top: 20px;
+  }
+  

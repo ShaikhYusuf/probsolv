@@ -11,6 +11,17 @@ import { Lesson9Component } from './lesson9/lesson9.component';
 import { Lesson10Component } from './lesson10/lesson10.component';
 import { Lesson11Component } from './lesson11/lesson11.component';
 import { Lesson12Component } from './lesson12/lesson12.component';
+import { Lesson13Component } from './lesson13/lesson13.component';
+import { Lesson14Component } from './lesson14/lesson14.component';
+import { Lesson15Component } from './lesson15/lesson15.component';
+import { Lesson16Component } from './lesson16/lesson16.component';
+import { Lesson17Component } from './lesson17/lesson17.component';
+import { Lesson18Component } from './lesson18/lesson18.component';
+import { Lesson19Component } from './lesson19/lesson19.component';
+import { Lesson20Component } from './lesson20/lesson20.component';
+
+
+
 
 export const routes: Routes = [
     { path: '', component: Lesson1Component },
@@ -25,4 +36,14 @@ export const routes: Routes = [
     { path: 'les10', component: Lesson10Component },
     { path: 'les11', component: Lesson11Component },
     { path: 'les12', component: Lesson12Component },
+    { path: 'les13', component: Lesson13Component },
+    { path: 'les14', component: Lesson14Component },
+    { path: 'les15', component: Lesson15Component },
+    { path: 'les16', component: Lesson16Component },
+    { path: 'les17', component: Lesson17Component },
+    { path: 'les18', component: Lesson18Component },
+    { path: 'les19', component: Lesson19Component },
+    { path: 'les20', component: Lesson20Component },
+
+
 ];

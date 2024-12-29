@@ -1,31 +1,49 @@
-<section class="audience-turnout">
-    <h3>Audience Turnout</h3>
-    <p>Goal: {{ audienceTurnout.goal }} attendees</p>
-    <p>Achieved: {{ audienceTurnout.achieved }} attendees</p>
+<div class="concert-outcome-container">
+  <h1 class="title">The Outcome of the Mushroom Lovers’ Concert</h1>
+
+  <section class="concert-results">
+    <h2>Concert Results</h2>
+    <ul>
+      <li>
+        <strong>Audience Turnout:</strong> 
+        <p>Goal: Attract 200 attendees.</p>
+        <p>Achieved: Over 200 people filled the gymnasium, exceeding expectations.</p>
+      </li>
+      <li>
+        <strong>Audience Awareness and Desire:</strong> 
+        <p>90% of the school became aware of the concert.</p>
+        <p>50% of those who knew about it were motivated to attend.</p>
+      </li>
+      <li>
+        <strong>Event Satisfaction:</strong>
+        <p>Post-concert surveys revealed that 90% of attendees planned to return for future events.</p>
+      </li>
+      <li>
+        <strong>Atmosphere:</strong>
+        <p>The audience erupted with cheers and chants for the band, creating an electrifying atmosphere.</p>
+        <p>Personal touches like Tofu’s jokes and stories kept the crowd engaged throughout the show.</p>
+      </li>
+    </ul>
   </section>
-  
-  <section class="audience-awareness">
-    <h3>Audience Awareness and Desire</h3>
-    <p>{{ audienceAwareness.totalAwareness }}% of the school became aware of the concert.</p>
-    <p>{{ audienceAwareness.motivatedToAttend }}% of those aware were motivated to attend.</p>
-  </section>
-  
-  <section class="event-satisfaction">
-    <h3>Event Satisfaction</h3>
-    <p>{{ eventSatisfaction.returnRate }}% of attendees planned to return for future events.</p>
-  </section>
-  
+
   <section class="key-lessons">
     <h2>Key Lessons Learned</h2>
-    <ul>
-      <li *ngFor="let lesson of keyLessons">{{ lesson }}</li>
-    </ul>
+    <ol>
+      <li><strong>Prioritization Yields Results:</strong> Early wins built momentum for challenging tasks.</li>
+      <li><strong>Collaboration Multiplies Effort:</strong> Delegating tasks improved quality and saved time.</li>
+      <li><strong>Creativity Drives Engagement:</strong> Innovative strategies made the concert memorable.</li>
+      <li><strong>Adaptability is Crucial:</strong> Aligning plans with audience preferences ensured success.</li>
+      <li><strong>Comprehensive Planning Prevents Chaos:</strong> A structured plan ensured timely completion of tasks.</li>
+    </ol>
   </section>
-  
+
   <section class="path-forward">
     <h2>The Mushroom Lovers' Path Forward</h2>
+    <p>Encouraged by their success, the band decided to:</p>
     <ul>
-      <li *ngFor="let step of pathForward">{{ step }}</li>
+      <li>Expand Their Audience: Consider holding concerts at nearby schools or community centers.</li>
+      <li>Strengthen Branding: Build consistent themes across posters, social media, and performances.</li>
+      <li>Enhance Fan Engagement: Develop new ways to interact with fans, such as Q&A sessions, online livestreams, or newsletters.</li>
     </ul>
   </section>
-  
+</div>

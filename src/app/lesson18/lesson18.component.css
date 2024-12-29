@@ -1,0 +1,79 @@
+.lesson-container {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #2c3e50;
+  }
+  
+  h2, h3 {
+    color: #34495e;
+  }
+  
+  h3 {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  
+  ul {
+    list-style-type: square;
+    padding-left: 20px;
+  }
+  
+  ul li {
+    font-size: 16px;
+    color: #34495e;
+  }
+  
+  strong {
+    color: #16a085;
+  }
+  
+  section {
+    background-color: #f4f6f7;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .overview, .types, .apply, .conclusion {
+    margin-bottom: 30px;
+  }
+  
+  .type {
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .type h3 {
+    color: #16a085;
+    font-size: 22px;
+  }
+  
+  .apply ul, .problem ul {
+    padding-left: 30px;
+  }
+  
+  .problem h3 {
+    color: #16a085;
+    margin-top: 20px;
+  }
+  
+  .conclusion p {
+    font-size: 16px;
+    color: #34495e;
+    margin-top: 10px;
+  }
+
+  
