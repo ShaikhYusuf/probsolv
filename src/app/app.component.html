@@ -1,5 +1,21 @@
 <div class="container">
+  <!-- Toggle Button -->
+  <button class="toggle-btn" (click)="toggleMenu()">☰</button>
+
+  <!-- Sidebar that gets toggled -->
+  <div class="right-sidebar" [ngClass]="{'active': menuActive}">
+    <!-- Menu links -->
+    <ul>
+      <li *ngFor="let item of menuItems">
+        <a [href]="item.url">{{ item.name }}</a>
+      </li>
+    </ul>
+  </div>
+
+
+</div>
+
+<div class="container">
  
   <router-outlet></router-outlet> 
-  
 </div>
