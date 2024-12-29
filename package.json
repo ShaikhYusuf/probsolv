@@ -9,7 +9,7 @@
     "test": "ng test",
     "serve:ssr:probsolve": "node dist/probsolve/server/server.mjs",
     "publish": "ng build --configuration production --output-path docs --base-href /probsolve/",
-    "postpublish": "cp ./docs/broswer/index.html ./docs/broswer/404.html"
+    "postpublish": "cp ./docs/browser/index.html ./docs/browser/404.html"
   },
   "private": true,
   "dependencies": {
