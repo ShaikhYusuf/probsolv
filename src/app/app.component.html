@@ -7,14 +7,21 @@
   <!-- Dropdown Menu -->
   <div class="dropdown-menu" *ngIf="isMenuActive">
     <ul>
-      <li *ngFor="let item of menuItems" (click)="selectMenuItem()">
-        <a [routerLink]="item.url">{{ item.name }}</a>
+      <li *ngFor="let item of menuItems" (click)="selectMenuItem(item)">
+        <a [routerLink]="getRouterLink(item)">{{ item.name }}</a>
       </li>
     </ul>
   </div>
-</div>
 
-<!-- Main Content Section -->
-<div class="main-content">
-  <router-outlet></router-outlet>
+  <!-- Main Content Section -->
+  <div class="main-content">
+    <div class="tabs-section">
+      <button *ngFor="let tab of tabs" [class.active]="activeTab === tab" (click)="setActiveTab(tab)"
+        class="tab-button">
+        {{ tab }}
+      </button>
+    </div>
+
+    <router-outlet></router-outlet>
+  </div>
 </div>

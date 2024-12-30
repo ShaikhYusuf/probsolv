@@ -19,8 +19,7 @@ import { Lesson17Component } from './lesson17/lesson17.component';
 import { Lesson18Component } from './lesson18/lesson18.component';
 import { Lesson19Component } from './lesson19/lesson19.component';
 import { Lesson20Component } from './lesson20/lesson20.component';
-
-
+import { QuizComponent } from './quiz/quiz.component';
 
 
 export const routes: Routes = [
@@ -44,6 +43,5 @@ export const routes: Routes = [
     { path: 'les18', component: Lesson18Component },
     { path: 'les19', component: Lesson19Component },
     { path: 'les20', component: Lesson20Component },
-
-
+    { path: 'quiz/:lessonId', component: QuizComponent }
 ];
