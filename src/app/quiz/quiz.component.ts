@@ -8,7 +8,7 @@ import { MatListModule } from '@angular/material/list';
   selector: 'app-quiz',
   imports: [CommonModule, MatListModule],
   templateUrl: './quiz.component.html',
-  styleUrl: './quiz.component.css'
+  styleUrl: './quiz.component.css',
 })
 export class QuizComponent {
   quizzes: any[] = [];
@@ -16,9 +16,10 @@ export class QuizComponent {
   submitted = false;
   lessonId!: number;
 
-  constructor(private http: HttpClient, private route: ActivatedRoute) { }
+  constructor(private http: HttpClient, private route: ActivatedRoute) {}
+
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
+    this.route.params.subscribe((params) => {
       this.lessonId = +params['lessonId'];
       this.loadQuizzes(this.lessonId);
     });
@@ -26,14 +27,14 @@ export class QuizComponent {
 
   loadQuizzes(lessonId: number): void {
     const url = `./lesson${lessonId}.json`;
-    this.http.get<any[]>(url).subscribe(
-      data => {
+    this.http.get<any[]>(url).subscribe({
+      next: (data) => {
         this.quizzes = data;
       },
-      error => {
+      error: (error) => {
         console.error('Error loading quiz data:', error);
-      }
-    );
+      },
+    });
   }
 
   selectOption(quizId: number, optionIndex: number): void {
@@ -43,6 +44,10 @@ export class QuizComponent {
   }
 
   submitAnswers(): void {
+    if (Object.keys(this.selectedAnswers).length < this.quizzes.length) {
+      alert('Please answer all the questions before submitting.');
+      return;
+    }
     this.submitted = true;
   }
 
@@ -51,17 +56,18 @@ export class QuizComponent {
       return this.selectedAnswers[quizId] === optionIndex ? 'highlight' : '';
     }
 
-    const isCorrect = this.quizzes.find(quiz => quiz.id === quizId)?.answer === optionIndex;
+    const quiz = this.quizzes.find((quiz) => quiz.id === quizId);
+    if (!quiz) return '';
+
+    const isCorrect = quiz.answer === optionIndex;
     const isSelected = this.selectedAnswers[quizId] === optionIndex;
 
     if (isCorrect) {
       return 'correct';
     } else if (isSelected) {
       return 'incorrect';
-    } else if (optionIndex === this.quizzes.find(quiz => quiz.id === quizId)?.answer) {
-      return 'correct-answer';
+    } else {
+      return '';
     }
-
-    return '';
   }
 }

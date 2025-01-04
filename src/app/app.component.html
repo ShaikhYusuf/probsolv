@@ -16,12 +16,14 @@
   <!-- Main Content Section -->
   <div class="main-content">
     <div class="tabs-section">
-      <button *ngFor="let tab of tabs" [class.active]="activeTab === tab" (click)="setActiveTab(tab)"
+      <button 
+        *ngFor="let tab of tabs" 
+        [class.active]="activeTab === tab" 
+        (click)="setActiveTab(tab)" 
         class="tab-button">
         {{ tab }}
       </button>
     </div>
-
     <router-outlet></router-outlet>
   </div>
 </div>

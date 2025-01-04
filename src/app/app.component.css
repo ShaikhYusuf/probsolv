@@ -1,14 +1,11 @@
-/*this is final code*/
 /* Basic container styling */
 .container {
   position: relative;
-  /* To allow positioning the dropdown on top of other content */
 }
 
 /* Menu button styles */
 .menu-btn {
   background-color: #a0a0a0;
-  /* New background color for the button */
   color: white;
   border: none;
   cursor: pointer;
@@ -16,30 +13,24 @@
   top: 20px;
   left: 20px;
   z-index: 15;
-  /* Ensure it appears above other content */
   border-radius: 5px;
-  /* Rounded corners */
 }
 
 .menu-btn:hover {
   background-color: #606060;
-  /* Darker shade on hover */
 }
 
 /* Dropdown Menu Styles */
 .dropdown-menu {
   position: fixed;
   top: 60px;
-  /* Position the dropdown below the button */
   left: 20px;
   background-color: #909090;
-  /* Darker background for the menu */
   color: white;
   width: 250px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 10;
-  /* Make sure it's above other content */
   padding: 10px;
   height: 200px;
   overflow: auto;
@@ -71,8 +62,24 @@
   transition: margin-left 0.3s ease;
 }
 
-/* Styling for active menu (if desired) */
-.main-content .active {
-  margin-left: 250px;
+/* Tabs section */
+.tabs-section {
+  display: flex;
+  margin-bottom: 20px;
+  margin-left: 50px;
 }
 
+.tab-button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(241, 171, 41);
+  color: black;
+}
+
+.tab-button.active {
+  background-color: dodgerblue;
+  color: white;
+}

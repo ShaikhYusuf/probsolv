@@ -1,87 +1,68 @@
 /* General Layout */
-.container {
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    overflow: visible; /* Prevent clipping */
-  }
-  
-  .sidebar {
-    height: 100%;
-    width: 250px;
-    transition: width 0.3s ease;
-    padding: 10px 0;
-    overflow-y: auto;  /* Allow for scrolling */
-  }
-  
-  .sidebar.collapsed {
-    width: 60px;
-  }
-  
-  .sidebar button {
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 16px;
-    background-color: #007bff; 
-    color: #ffffff; 
-    font-size: 16px; 
-    font-weight: bold; 
-    padding: 10px 20px; 
-    border-radius: 8px; 
-    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  */
-  }
-  
-  .sidebar button:hover {
-    background-color: green;
-  }
-  
-  .content {
-    flex: 1;
-    padding: 20px;
-    background-color: #f4f4f4;
-    overflow-y: auto;
-  }
-  
-  /* Submenu styling */
-  .submenu {
-    margin-left: 20px;
-    padding-left: 10px;
-  }
-  
-  /* List item styling */
-  .mdc-list-item.mdc-list-item--with-one-line {
-    height: auto !important; /* Allow the list item to expand */
-  }
-  .mat-nav-list .mat-list-item {
-    display: flex;
-    align-items: center;
-  }
-  
-  .mat-nav-list .mat-list-item mat-icon {
-    cursor: pointer;
-    margin-right: 10px;
-  }
-  
-  .mat-list-item:hover {
-    overflow: visible;
-    white-space: normal; /* Allow text to wrap */
-  }
-  
-  .mat-list-item:hover {
-    white-space: normal; /* Allow full content display on hover */
-    overflow: visible; /* Ensure content is not clipped */
-    background-color: #f0f0f0; /* Optional: add background color on hover for better visibility */
-  }
-  
-  
-  .sidebar {
-    height: 100%;
-    width: 250px;
-    transition: width 0.3s ease;
-    background-color: lightgray;
-  }
-  
-  .sidebar.collapsed {
-    width: 60px;
-  }
+.quiz-container {
+  max-width: 100%;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-item {
+  margin-bottom: 20px;
+}
+
+.quiz-item h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.mat-list-item {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.mat-list-item:hover {
+  background-color: #f0f0f0;
+}
+
+.highlight {
+  background-color: #ffeb3b;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);;
+}
+
+.correct {
+  background-color: #c8e6c9;
+}
+
+.incorrect {
+  background-color: #ffcdd2;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.custom-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.custom-button:hover {
+  background-color: #0056b3;
+}
+
+.custom-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

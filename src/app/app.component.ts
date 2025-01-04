@@ -8,15 +8,14 @@ import { MatIconModule } from '@angular/material/icon';
   selector: 'app-root',
   imports: [RouterOutlet, RouterModule, CommonModule, MatListModule, MatIconModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  
   title = 'probsolve';
-  isMenuActive = false;  // Initialize menu visibility
-  activeTab = 'Explanation'; // Default active tab (Explanation)
-
+  isMenuActive = false; // Initialize menu visibility
+  activeTab = 'Explanation'; // Default active tab
   selectedMenuItem: any = null; // Track selected menu item for submenu display
+
   menuItems = [
     { name: 'Problem-Solving Kids and Company', url: '', quiz: 'quiz/1' },
     { name: 'Problem Solving', url: './les2', quiz: 'quiz/2' },
@@ -42,35 +41,29 @@ export class AppComponent {
 
   tabs = ['Explanation', 'Quiz'];
 
-  constructor(private router: Router) { 
+  constructor(private router: Router) {
     this.selectedMenuItem = this.menuItems[0];
   }
 
-  toggleMenu() {
+  toggleMenu(): void {
     this.isMenuActive = !this.isMenuActive;
   }
 
-  // Close menu on selecting a menu item
-  selectMenuItem(item: any) {
+  selectMenuItem(item: any): void {
     this.selectedMenuItem = this.selectedMenuItem === item ? null : item;
     this.isMenuActive = false;
   }
 
-  setActiveTab(tab: string) {
+  setActiveTab(tab: string): void {
     this.activeTab = tab;
 
     if (this.selectedMenuItem) {
-      if (this.activeTab === 'Explanation') {
-        this.router.navigate([this.selectedMenuItem.url]); // Navigate to the 'url' of selected item
-      } else if (this.activeTab === 'Quiz') {
-        if (this.selectedMenuItem.quiz) {
-          this.router.navigate([this.selectedMenuItem.quiz]); // Navigate to the 'quiz' URL of selected item
-        }
-      }
+      const route = this.activeTab === 'Explanation' ? this.selectedMenuItem.url : this.selectedMenuItem.quiz;
+      if (route) this.router.navigate([route]);
     }
   }
 
-  getRouterLink(item: any) {
+  getRouterLink(item: any): string {
     return item.url;
   }
 }
