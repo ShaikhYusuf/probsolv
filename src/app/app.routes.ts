@@ -21,7 +21,6 @@ import { Lesson19Component } from './lesson19/lesson19.component';
 import { Lesson20Component } from './lesson20/lesson20.component';
 import { QuizComponent } from './quiz/quiz.component';
 
-
 export const routes: Routes = [
     { path: '', component: Lesson1Component },
     { path: 'les2', component: Lesson2Component },
